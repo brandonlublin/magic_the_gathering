@@ -1,25 +1,33 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './style.css'
-import { Card, Row, Col, CardTitle, Icon } from 'react-materialize';
 
-const MagicCard = () => {
+function MagicCard(props) {
+    const { name, artist, setname, type, deck } = props;
+
     return (
-        <Row>
-            <Col m={3} s={12}>
-                <Card
-                actions={[
-                    <a key="1" href="#">This is a Link</a>
-                ]}
-                closeIcon={<Icon>close</Icon>}
-                header={<CardTitle image="https://materializecss.com/images/sample-1.jpg">Card Title</CardTitle>}
-                revealIcon={<Icon>more_vert</Icon>}
-                >
-                Here is the standard card with an image thumbnail.
-                </Card>
-            </Col>
-        </Row>
+        <div className="row">
+            <div className="col s12 m7">
+            <div className="card">
+                <div className="card-image">
+                    <img src="images/sample-1.jpg" />
+                    <span className="card-title">Card Title</span>
+                </div>
+                <div className="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div className="card-action">
+                    <li>{name}</li>
+                    <li>{artist}</li>
+                    <li>{setname}</li>
+                    <li>{type}</li>
+                    <li>{deck}</li>
+                </div>
+            </div>
+            </div>
+        </div>
     )
-}
+};
 
 export default MagicCard;
