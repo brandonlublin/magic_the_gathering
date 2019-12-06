@@ -3,6 +3,7 @@ import './App.css';
 import CardWrapper from './components/CardWrapper';
 import Header from './components/Header';
 import MagicCard from './components/MagicCard';
+import Search from './components/Search';
 
 function App() {
   return (

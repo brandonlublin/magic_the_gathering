@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.css'
 import { NavItem, Icon, Navbar, Row, Col } from 'react-materialize';
+import Search from '../Search';
 
 const Header = () => {
+
     return (
         <Row>
             <Navbar
@@ -11,9 +13,7 @@ const Header = () => {
             >
             <div className='brand-logo'>Magic, The Gathering</div>
             <NavItem href="/">
-                <Icon>
-                    search
-                </Icon>
+                <Search />
             </NavItem>
             <NavItem href="/">
                 <Icon>
