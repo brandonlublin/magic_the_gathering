@@ -1,19 +1,19 @@
-import React from 'react'
-import './style.css'
-import { Card, CardTitle } from 'react-materialize';
+import React from "react"
+import "./style.css"
+import { Card, CardTitle } from "react-materialize";
 
 function MagicCard(props) {
-    const { name, artist, setname, type, deck } = props;
+    const { imageUrl, name, artist, set, type, deck } = props;
 
     return (
         <Card
-            header={<CardTitle image="https://materializecss.com/images/sample-1.jpg"></CardTitle>}
+            header={<CardTitle image={imageUrl}></CardTitle>}
         >
             <div className="card-action">
                 <li>{name}</li>
                 <li>{artist}</li>
-                <li>{setname}</li>
                 <li>{type}</li>
+                <li>{set}</li>
                 <li>{deck}</li>
             </div>
         </Card>

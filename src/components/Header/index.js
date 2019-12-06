@@ -1,26 +1,30 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './style.css'
-import { NavItem, Icon, Navbar, Row, Col } from 'react-materialize';
-import Search from '../Search';
+import React from "react";
+import "./style.css"
+import { NavItem, Icon, Navbar, Row } from "react-materialize";
+import Search from "../Search";
 
 const Header = () => {
 
     return (
         <Row>
             <Navbar
-                alignLinks="right"
-            >
-            <div className='brand-logo'>Magic, The Gathering</div>
-            <NavItem href="/">
-                <Search />
-            </NavItem>
-            <NavItem href="/">
-                <Icon>
-                    filter
-                </Icon>
-            </NavItem>
+                alignLinks="left"
+                brand={<a className="brand-logo" href="#">Magic, The Gathering</a>}
+                centerLogo
+                options={{
+                    draggable: true,
+                    edge: "left",
+                    inDuration: 250,
+                    onCloseEnd: null,
+                    onCloseStart: null,
+                    onOpenEnd: null,
+                    onOpenStart: null,
+                    outDuration: 200,
+                    preventScrolling: true
+                }}
+                >
             </Navbar>
+            <Search />
         </Row>
     )
 }

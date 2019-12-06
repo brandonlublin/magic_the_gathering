@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import axios from "axios";
-import './style.css';
-import MagicCard from '../MagicCard';
+import "./style.css";
+import MagicCard from "../MagicCard";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import { Col, Row, Preloader } from 'react-materialize';
-import Container from 'react-materialize/lib/Container';
-import InfiniteScroll from 'react-infinite-scroller';
+import { Col, Row, Preloader } from "react-materialize";
+import Container from "react-materialize/lib/Container";
 
 class CardWrapper extends Component {
     constructor(props) {
@@ -13,8 +12,7 @@ class CardWrapper extends Component {
         this.state = { 
             cards: [],
             isLoading: true,
-            isGetting: false,
-            err: ''
+            err: ""
         }
     };
     //call axios url and update state for cards returned in response
@@ -36,32 +34,34 @@ class CardWrapper extends Component {
 
     //once component mounts, run query of axios to return JSON
     componentDidMount() {
-        console.log("the component mounted");
-        const page1 = "https://api.magicthegathering.io/v1/cards?types=creature&imageUrl=true&pageSize=20&page=1";
+        let pageLoadNum = 1;
+        const urlQ = `https://api.magicthegathering.io/v1/cards?types=creature&imageUrl=true&pageSize=20&page=${pageLoadNum}`;
 
-        this.queryAxios(page1);
+        this.queryAxios(urlQ);
     }
 
     render() {
         //reassigning stateful variables to const for easier readability
         const cardsObj = this.state.cards;
-        const waiting = this.state.waiting;
         const loading = (
-            <Col s={4}>
+            <Col s={12}>
                 <Preloader
-                active
-                color="blue"
-                flashing={false}
-                size="big"
+                    active="true"
+                    color="blue"
+                    flashing={false}
+                    size="big"
                 />
             </Col>
         )
-        const list = cardsObj.map((card, i) => {
+        const list = cardsObj.map(card => {
             return (
                 <Col m={4}>
                     <MagicCard 
-                        card={card}
-                        key={i}
+                        name={`Name: ${card.name}`}
+                        imageUrl={card.imageUrl}
+                        artist={`Artist: ${card.artist}`}
+                        type={`Type: ${card.type}`}
+                        set={`Type: ${card.set}`}
                     />
                 </Col>
             )
@@ -70,18 +70,11 @@ class CardWrapper extends Component {
             <div>
             <Container fluid="true">
                 <Row>
-                    {list}
+                {this.state.isLoading ? loading : <div className="list">{list}</div>}
                 </Row>
             </Container>
-                {/* <InfiniteScroll
-                    pageStart=""
-                    loadMore={this.queryAxios}
-                    hasMore={true || false}
-                    loader={<div className="loader">Loading ...</div>}>
-                </InfiniteScroll> */}
             </div>
         );
-        //if waiting 
     }
 }
 export default CardWrapper;

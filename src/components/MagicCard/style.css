@@ -1,0 +1,10 @@
+div.card-action {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style-type: none;
+}
+div.card-content {
+    padding: 0;
+}

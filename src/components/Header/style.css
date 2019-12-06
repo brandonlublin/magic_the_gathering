@@ -1,5 +1,6 @@
 nav {
     background-color: dodgerblue;
+    height: 90px;
 }
 .section {
     padding-top: 0;
@@ -7,8 +8,30 @@ nav {
 .nav-wrapper {
     text-align: center;
 }
-.brand-logo {
-    margin-left: 40px;
-    position: absolute;
-    left: 0;
+a.brand-logo.center {
+    padding-top: 10px;
+    font-size: 50px;
+}
+.material-icons {
+    display: none;
+}
+@media screen and (max-width: 995px) {
+    .sidenav-trigger {
+        display: none;
+    }
+    .brand-logo.center {
+        margin: 0;
+        font-size: 20px;
+        overflow: auto;
+    }
+    #search-input {
+        margin-bottom: 10px;
+    }
+    a.brand-logo.center {
+        font-size: 25px;
+    }
+    nav {
+        height: 120px;
+        line-height: 45px;
+    }
 }

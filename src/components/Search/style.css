@@ -1,0 +1,35 @@
+.heading {
+	font-size: 30px;
+	padding: 16px 0;
+	color: #444;
+	text-align: center;
+}
+/*Container*/
+.container {
+	/* margin: 36px auto; */
+	width: 90%;
+	max-width: 900px;
+}
+.search-label {
+	position: relative;
+}
+.container input {
+	width: 90%;
+	/* padding: 16px; */
+	font-size: 36px;
+	font-style: italic;
+	color: black;
+	box-sizing: border-box;
+	outline: none;
+}
+.search-icon {
+	position: absolute;
+	top: -10px;
+	font-size: 24px;
+	color: black;
+	right: 18px;
+}
+#search-input {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
