@@ -4,6 +4,11 @@ nav {
 .section {
     padding-top: 0;
 }
+.nav-wrapper {
+    text-align: center;
+}
 .brand-logo {
-
+    margin-left: 40px;
+    position: absolute;
+    left: 0;
 }
