@@ -87,7 +87,7 @@ class CardWrapper extends Component {
                         imageUrl={card.imageUrl}
                         artist={`Artist: ${card.artist}`}
                         type={`Type: ${card.type}`}
-                        set={`Type: ${card.set}`}
+                        set={`Set   : ${card.set}`}
                     />
                 </Col>
             )
