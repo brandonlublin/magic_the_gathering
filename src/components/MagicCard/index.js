@@ -8,6 +8,7 @@ function MagicCard(props) {
 
     return (
         <Card>
+            <h4 className="cardName">{name}</h4>
             <ReactImageFallback
                 className="image"
                 src={imageUrl}
@@ -16,7 +17,6 @@ function MagicCard(props) {
                 alt="Magical Creature"
             />
             <div className="card-action">
-                <li>{name}</li>
                 <li>{artist}</li>
                 <li>{type}</li>
                 <li>{set}</li>

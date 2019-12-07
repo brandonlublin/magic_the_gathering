@@ -2,14 +2,22 @@ li {
     list-style-type: none;
 }
 .card .card-content {
-    padding-bottom: 20px;
-    height: 520px; /* Your height here */
+    /* padding-top: 100px; */
+    padding-bottom: 10px;
+    height: 550px; /* Your height here */
     /* overflow: hidden; */
     background-color: #fff;
     box-shadow: black 1px 2px 2px 1px;
 }
 .image {
     padding-top: 10px;
+}
+.cardName {
+    /* position: absolute; */
+    font-size: 18px;
+    top: 10px;
+    text-align: center;
+    /* margin: 20px; */
 }
 @media screen and (max-width: 500px) {
     .card .card-content {
