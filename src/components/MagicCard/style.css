@@ -1,10 +1,19 @@
-div.card-action {
-    padding: 0;
-    margin: 0;
-}
 li {
     list-style-type: none;
 }
-div.card-content {
-    padding: 0;
+.card .card-content {
+    padding-bottom: 20px;
+    height: 520px; /* Your height here */
+    /* overflow: hidden; */
+    background-color: #fff;
+    box-shadow: black 1px 2px 2px 1px;
+}
+.image {
+    padding-top: 10px;
+}
+@media screen and (max-width: 500px) {
+    .card .card-content {
+        width: 320px;
+        height: 490px;
+    }
 }

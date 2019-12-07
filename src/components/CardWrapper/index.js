@@ -5,7 +5,6 @@ import MagicCard from "../MagicCard";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { Col, Row, Preloader } from "react-materialize";
 import Container from "react-materialize/lib/Container";
-import InfiniteScroll from 'react-infinite-scroller';
 
 class CardWrapper extends Component {
     constructor(props) {
@@ -35,24 +34,9 @@ class CardWrapper extends Component {
         });
     };
 
-    scrollQuery(urlq) {
-        let newPage = this.state.pageNum;
-        let pageLoadNum = this.state.pageNum;
-        if (
-            window.innerHeight + document.documentElement.scrollTop  !==
-            document.documentElement.offsetHeight
-        ) {
-            newPage = newPage++;
-            this.setState({
-                loadingMore: true
-            });
-            this.queryAxios()
-        }
-    }
-
-
     //once component mounts, run query of axios to return JSON
     componentDidMount() {
+        //storing pageNum as an individual value so i can iterate through pages as page scrolls
         let pageLoadNum = this.state.pageNum;
         let urlQ = `https://api.magicthegathering.io/v1/cards?types=creature&imageUrl=true&pageSize=20&page=${pageLoadNum}`;
 
@@ -89,16 +73,9 @@ class CardWrapper extends Component {
             <div>
             <Container fluid="true">
                 <Row>
+                    {/* looping through each card returned from api, and display loading ring until results returned */}
                     {this.state.isLoading ? loading : <div className="list">{list}</div>}
                 </Row>
-                <InfiniteScroll
-                    pageStart={0}
-                    loadMore={this.queryAxios}
-                    hasMore={true || false}
-                    loader={<div className="loader" key={0}>Loading ...</div>}
-                >
-                    {list}
-                </InfiniteScroll>
             </Container>
             </div>
         );

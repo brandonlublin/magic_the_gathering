@@ -17,10 +17,10 @@
 	width: 90%;
 	/* padding: 16px; */
 	font-size: 36px;
-	font-style: italic;
-	color: black;
+	color: #fff;
+	text-emphasis-color: black;
 	box-sizing: border-box;
-	outline: none;
+	font-weight: bold;
 }
 .search-icon {
 	position: absolute;

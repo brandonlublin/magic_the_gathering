@@ -1,6 +1,9 @@
 nav {
-    background-color: dodgerblue;
     height: 90px;
+    background: #24c6dc; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24c6dc, #514a9d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24c6dc, #514a9d);
+    box-shadow: #444444 1px 2px 2px 1px;
 }
 .section {
     padding-top: 0;

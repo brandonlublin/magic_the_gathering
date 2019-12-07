@@ -1,7 +1,8 @@
 import React from "react";
 import "./style.css"
-import { NavItem, Icon, Navbar, Row } from "react-materialize";
+import { Navbar, Row } from "react-materialize";
 import Search from "../Search";
+import Sort from "../Sort";
 
 const Header = () => {
 
@@ -9,7 +10,7 @@ const Header = () => {
         <Row>
             <Navbar
                 alignLinks="left"
-                brand={<a className="brand-logo" href="#">Magic, The Gathering</a>}
+                brand={<a className="brand-logo" href="/">Magic, The Gathering</a>}
                 centerLogo
                 options={{
                     draggable: true,
@@ -25,6 +26,7 @@ const Header = () => {
                 >
             </Navbar>
             <Search />
+            <Sort />
         </Row>
     )
 }

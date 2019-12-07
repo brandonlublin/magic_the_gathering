@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 import { Col } from "react-materialize";
 
-class Search extends Component {
+class Sort extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -21,14 +21,14 @@ class Search extends Component {
 		return (
 			<div className="container">
 				{/*Heading*/}
-				{/* Search Input */}
+				{/* Sort Input */}
 				<Col s={6} m={6} l={6}>
-					<label className="search-label" htmlFor="search-input">
+					<label className="sort-label" htmlFor="sort-input">
 						<input
 							type="text"
 							value={this.state.query}
 							id="search-input"
-							placeholder="Search..."
+							placeholder="Sort..."
 							onChange={this.handleOnInputChange}
 						/>
 						<i className="fa fa-search search-icon"/>
@@ -38,4 +38,4 @@ class Search extends Component {
 			)
 	}
 }
-export default Search;
+export default Sort;
