@@ -50,7 +50,7 @@ I typically try to illustrate each and every piece of functionality with comment
 
 # Issues
 - The API was very difficult to work with. The results were returned quite slow, and sometimes wouldn't return at all as I'd receive a `503` error. I tried to make things as efficient as possible to mitigate some of this lag.
-- There seems to be a bug in my search that after displaying results for search, there is a short timeout and then the cards being displayed are sorted alphabetically. this seems to be caused from my loadMore() function firing when it's not meant to
+- There seems to be a bug in my search that after displaying results for search, there is a short timeout and then the cards being displayed are sorted alphabetically. this seems to be caused from my `loadMore()` function firing when it's not meant to
 
 ##### I wasn't sure as to whether or not I was supposed to filter the results determined in the dropdown on the front-end or the back-end, but figured doing so on the back-end would ensure the data is returned more accurately and in a way that alleviates the burden of the front-end
 
