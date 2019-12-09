@@ -99,7 +99,7 @@ class CardWrapper extends Component {
         }
         const list = cardsArray.map((card, i) => {
             return (
-                <Col m={6} key={i}>
+                <Col m={4} key={i}>
                     <MagicCard 
                         name={card.name}
                         imageUrl={card.imageUrl}
