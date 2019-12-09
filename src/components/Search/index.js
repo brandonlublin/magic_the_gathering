@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './style.css';
 import { Col } from 'react-materialize';
 import MagicCard from '../MagicCard';
+import {DebounceInput} from 'react-debounce-input';
 
 class Search extends Component {
 	constructor(props) {
@@ -46,7 +47,10 @@ class Search extends Component {
 				{/* Search Input */}
 				<Col s={6} m={6} l={6}>
 					<label className='search-label' htmlFor='search-input'>
-						<input
+						<DebounceInput
+							minLength={2}
+							debounceTimeout={300}
+							onChange={event => this.setState({value: event.target.value})}
 							type='text'
 							value={this.state.query}
 							id='search-input'
