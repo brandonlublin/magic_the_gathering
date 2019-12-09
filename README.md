@@ -28,7 +28,6 @@ with all of the breakpoints, my header wasn't functioning properly, so to save t
 
 #### Fix most of the css
 - sometimes the cards aren't centered on mobile
-- the div surrounding the filter drop down wouldn't adjust to my `<Col s={6} m={6} l={6}>` that I had added for some reason. it's still fits at full screen on most devices, but this could be reworked I'm sure
 - card image is overflowing from card at one breakpoint, kept tinkering with the media queries, but seemed to be going in circles
 - font color is different between the dropdown and search menu. tried about 100 different things to change the font, but wasn't changing
 
