@@ -30,6 +30,7 @@ with all of the breakpoints, my header wasn't functioning properly, so to save t
 - sometimes the cards aren't centered on mobile
 - the div surrounding the filter drop down wouldn't adjust to my `<Col s={6} m={6} l={6}>` that I had added for some reason. it's still fits at full screen on most devices, but this could be reworked I'm sure
 - card image is overflowing from card at one breakpoint, kept tinkering with the media queries, but seemed to be going in circles
+- font color is different between the dropdown and search menu. tried about 100 different things to change the font, but wasn't changing
 
 #### Create a landing page that explains the functionality of the app
 thought it might be little more user friendly to have a generic page that explains some details of the API and what data is being retrieved but figured due to time constraints, this could be a good icebox item. Will add this after submitting
