@@ -55,7 +55,7 @@ class Sort extends Component {
 	render() {
 		return (
 			<div className='container'>
-				<Col s={4} m={4} l={4}>
+				<Col s={6} m={6} l={6}>
 					{this.renderSelect()}
 				</Col>
 			</div>	

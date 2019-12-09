@@ -1,7 +1,7 @@
 .heading {
 	font-size: 30px;
 	padding: 16px 0;
-	color: #444;
+	color: #fff;
 	text-align: center;
 }
 /*Container*/
@@ -18,7 +18,6 @@
 	/* padding: 16px; */
 	font-size: 36px;
 	color: #fff;
-	text-emphasis-color: black;
 	box-sizing: border-box;
 	font-weight: bold;
 }
@@ -26,10 +25,14 @@
 	position: absolute;
 	top: -10px;
 	font-size: 24px;
-	color: black;
 	right: 18px;
 }
 #search-input {
     margin-top: 30px;
     margin-bottom: 30px;
+}
+input:not([type]), input[type=date]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=email]:not(.browser-default), input[type=number]:not(.browser-default), input[type=password]:not(.browser-default), input[type=search]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=text]:not(.browser-default), input[type=time]:not(.browser-default), input[type=url]:not(.browser-default), textarea.materialize-textarea {
+	background-color: #444;
+	padding-left: 10px;
+	opacity: .8;
 }

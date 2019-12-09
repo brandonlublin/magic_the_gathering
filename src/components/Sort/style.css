@@ -1,21 +1,21 @@
 .select-wrapper input.dropdown-trigger {
 	margin: 15px;
-	color: #FFF;
-	text-emphasis-color: black;
-	text-shadow: 1px 1px 1px black;
 	box-sizing: border-box;
 	font-weight: bold;
-	width: 380px;
+}
+.input-field {
+    position: relative;
+    margin-top: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 .heading {
 	font-size: 30px;
 	padding: 16px 0;
-	color: #444;
 	text-align: center;
 }
 /*Container*/
 .container {
-	/* margin: 36px auto; */
 	width: 90%;
 	max-width: 900px;
 }
@@ -24,10 +24,7 @@
 }
 .container input {
 	width: 90%;
-	/* padding: 16px; */
 	font-size: 36px;
-	color: #fff;
-	text-emphasis-color: black;
 	box-sizing: border-box;
 	font-weight: bold;
 }
@@ -41,4 +38,8 @@
 #search-input {
     margin-top: 30px;
     margin-bottom: 30px;
+}
+label {
+	font-size: .8rem;
+
 }
