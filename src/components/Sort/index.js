@@ -25,7 +25,7 @@ class Sort extends Component {
 	renderSelect() {
 		return (
 			//element wasn't rendering properly when pulling from Materialize package, so manually added src code here from npm package
-			<Select className='search-label' onChange={this.handleOnInputChange} options={{
+			<Select onChange={this.handleOnInputChange} options={{
 				classes: 'search-label',
 				dropdownOptions: {
 				alignment: 'left',

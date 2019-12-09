@@ -49,8 +49,7 @@ class Search extends Component {
 					<label className='search-label' htmlFor='search-input'>
 						<DebounceInput
 							minLength={2}
-							debounceTimeout={300}
-							onChange={event => this.setState({value: event.target.value})}
+							debounceTimeout={1000}
 							type='text'
 							value={this.state.query}
 							id='search-input'

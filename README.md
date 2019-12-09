@@ -46,10 +46,11 @@ There were a lot of duplicates returned from the API, so another icebox option i
 In my coding bootcamp, I wasn't fully trained on unit testing and testing best practices, so I'd like to add additional tests outside of the two API tests and one component test. I'm currently doing an online training for testing to expand my knowledge base
 
 #### Better comment code
-typically try to illustrate each and every piece of functionality with comments, but wanted to submit as soon as possible.
+I typically try to illustrate each and every piece of functionality with comments, but wanted to submit as soon as possible.
 
 # Issues
-The API was very difficult to work with. The results were returned quite slow, and sometimes wouldn't return at all as I'd receive a `503` error. I tried to make things as efficient as possible to mitigate some of this lag.
+- The API was very difficult to work with. The results were returned quite slow, and sometimes wouldn't return at all as I'd receive a `503` error. I tried to make things as efficient as possible to mitigate some of this lag.
+- There seems to be a bug in my search that after displaying results for search, there is a short timeout and then the cards being displayed are sorted alphabetically. this seems to be caused from my loadMore() function firing when it's not meant to
 
 ##### I wasn't sure as to whether or not I was supposed to filter the results determined in the dropdown on the front-end or the back-end, but figured doing so on the back-end would ensure the data is returned more accurately and in a way that alleviates the burden of the front-end
 
