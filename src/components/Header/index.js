@@ -1,20 +1,20 @@
-import React from "react";
-import "./style.css"
-import { Navbar, Row } from "react-materialize";
-import Search from "../Search";
-import Sort from "../Sort";
+import React from 'react';
+import './style.css'
+import { Navbar, Row } from 'react-materialize';
+import Search from '../Search';
+import Sort from '../Sort';
 
-const Header = () => {
-
+const Header = ({ handleSearchChange, searchDisabled, handleDropdownChange }) => {
+    
     return (
         <Row>
             <Navbar
-                alignLinks="left"
-                brand={<a className="brand-logo" href="/">Magic, The Gathering</a>}
+                alignLinks='left'
+                brand={<a className='brand-logo' href='/'>Magic, The Gathering</a>}
                 centerLogo
                 options={{
                     draggable: true,
-                    edge: "left",
+                    edge: 'left',
                     inDuration: 250,
                     onCloseEnd: null,
                     onCloseStart: null,
@@ -25,10 +25,17 @@ const Header = () => {
                 }}
                 >
             </Navbar>
-            <Search />
-            <Sort />
+            <Row>
+                <Search onSearchChange={handleSearchChange} searchDisabled={searchDisabled} />
+                <Sort onDropdownChange={handleDropdownChange}/>
+            </Row>
         </Row>
     )
+}
+
+Header.defaultProps = { 
+    handleDropdownChange: () => {},
+    handleSearchChange: () => {}
 }
 
 export default Header;

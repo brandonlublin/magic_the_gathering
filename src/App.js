@@ -1,12 +1,10 @@
-import React from "react";
-import "./App.css";
-import CardWrapper from "./components/CardWrapper";
-import Header from "./components/Header";
+import React from 'react';
+import './App.css';
+import CardWrapper from './components/CardWrapper';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <div className='App'>
       <CardWrapper />
     </div>
   );

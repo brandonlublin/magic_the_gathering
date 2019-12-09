@@ -2,9 +2,11 @@
   text-align: center;
 }
 body {
-  background-image: url("https://i.pinimg.com/originals/82/32/15/8232157f8d4e09717bf71b9a5e7d2929.jpg");
+  background-image: url('https://i.pinimg.com/originals/82/32/15/8232157f8d4e09717bf71b9a5e7d2929.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 .App-logo {
   height: 40vmin;

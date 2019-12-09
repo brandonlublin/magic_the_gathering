@@ -1,3 +1,12 @@
+.select-wrapper input.dropdown-trigger {
+	margin: 15px;
+	color: #FFF;
+	text-emphasis-color: black;
+	text-shadow: 1px 1px 1px black;
+	box-sizing: border-box;
+	font-weight: bold;
+	width: 380px;
+}
 .heading {
 	font-size: 30px;
 	padding: 16px 0;
@@ -21,13 +30,6 @@
 	text-emphasis-color: black;
 	box-sizing: border-box;
 	font-weight: bold;
-	-webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: black;
-}
-input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
-	background-color: #444;
-	padding-left: 10px;
-	opacity: 0.7;
 }
 .search-icon {
 	position: absolute;

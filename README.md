@@ -1,68 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Magic, The Gathering Coding Challenge // Highspot Front End Engineer
 
-## Available Scripts
+### How to use app locally:
 
-In the project directory, you can run:
+1: run `git clone https://github.com/brandonlublin/magic_the_gathering.git && cd magic_the_gathering`  
+2: install dependencies `npm install` or `yarn`  
+3: run `npm start` or `yarn start`  
 
-### `npm start`
+Can be seen live at [https://magic-the-gathering-hs.netlify.com/](https://magic-the-gathering-hs.netlify.com/)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Technologies Used:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### React by way of `npx create-react-app`  
+wanted to work with the create-react-app boilerplate to hit the ground running. Chose React since it has stateful components and modularizes the front-end. Helps that it's my favorite front-end framework as well.
 
-### `npm test`
+#### Node
+most familiar with Node from the back-end.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### ESLint
+I used the standard ESLint rules to create a consistent format across each module/component
 
-### `npm run build`
+#### Materialize
+Due to lack of time, I wanted to use a CSS framework so I could get a relatively polished front-end, while being able to fully implement the functionality of the project
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# ToDo's
+#### integrate the search bar and sort drop down into the header
+with all of the breakpoints, my header wasn't functioning properly, so to save time, I moved them both to below the header.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### Fix most of the css
+- sometimes the cards aren't centered on mobile
+- the div surrounding the filter drop down wouldn't adjust to my `<Col s={6} m={6} l={6}>` that I had added for some reason. it's still fits at full screen on most devices, but this could be reworked I'm sure
+- card image is overflowing from card at one breakpoint, kept tinkering with the media queries, but seemed to be going in circles
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Create a landing page that explains the functionality of the app
+thought it might be little more user friendly to have a generic page that explains some details of the API and what data is being retrieved but figured due to time constraints, this could be a good icebox item. Will add this after submitting
 
-### `npm run eject`
+#### Dig into the materialize package
+There are a couple errors in the console from issues that I ran into with some of the Materialize packages, such as `'revealicon'` and `'closeicon'` being required but me not having direct access to alter them in the package. will dig into this after submitting to better understand
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Issues with data returned from API // removing duplicates
+I was expecting that adding `contains='imageUrl'` to my API Query would only return results that contained an image, but this didn't end up being the case. to account for this, I generated a stock image for the magic card to put a band-aid on the issue to avoid delays in submitting  
+There were a lot of duplicates returned from the API, so another icebox option is to remove duplicates on the back-end before rendering them on the front-end
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Testing
+In my coding bootcamp, I wasn't fully trained on unit testing and testing best practices, so I'd like to add additional tests outside of the two API tests and one component test. I'm currently doing an online training for testing to expand my knowledge base
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Better comment code
+typically try to illustrate each and every piece of functionality with comments, but wanted to submit as soon as possible.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Issues
+The API was very difficult to work with. The results were returned quite slow, and sometimes wouldn't return at all as I'd receive a `503` error. I tried to make things as efficient as possible to mitigate some of this lag.
 
-## Learn More
+##### I wasn't sure as to whether or not I was supposed to filter the results determined in the dropdown on the front-end or the back-end, but figured doing so on the back-end would ensure the data is returned more accurately and in a way that alleviates the burden of the front-end
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Project board](https://github.com/brandonlublin/magic_the_gathering/projects/1)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

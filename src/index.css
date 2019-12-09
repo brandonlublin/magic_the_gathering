@@ -1,11 +1,11 @@
 body {
   margin: 0;
-  font-family: "avenir";
+  font-family: 'avenir';
   font-weight: bolder;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: "avenir";
+  font-family: 'avenir';
 }
